@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
 
 
 * {
@@ -7,11 +6,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     height: 100vh;
     background-image: linear-gradient(to bottom right, rgb(11, 7, 70), rgb(18, 94, 56));
     background-attachment: fixed;
-    font-family: 'Montserrat', sans-serif;
 }
 
 /* navbar css */
@@ -19,71 +18,63 @@ nav {
     background-color: rgb(10, 9, 15);
     position: fixed;
     display: grid;
-    height: 50px;
+    height: 60px;
     width: 100%;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 200px calc(100% - 200px);
     z-index: 98;
-}
-nav > div {
-    display: flex;
-}
-nav > ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    visibility: visible;
+    border: 2px solid red;
+
+    ul {
+        display: flex;
+        padding-right: 30px;
+        justify-content: flex-end;
+        list-style: none;
+        align-items: center;
+        visibility: visible;
+        border: 2px solid red;
+        margin: auto 0;
+    }
+
+    div {
+    }
 }
 
 #companyLbl {
-    margin: auto 0;
-    font-family: 'Kanit', sans-serif;
+    display: flex;
+    align-items: center;
+    font-family: 'Gilda Display', serif;
     font-weight: 500;
-    font-size: 16px;
-}
-#companyLbl > a {
-    text-decoration: none;
-    color: #7bcee7;
+    font-size: 1rem;
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+
+    a {
+        text-decoration: none;
+        color: #7bcee7;
+        border: 2px solid red;
+
+    }
 }
 
 .navlinks {
-    margin: 0 auto;
-}
-.navlinks > a {
-    text-decoration: none;
-    color: #b2d1fa;
-    font-size: 10px;
-    transition: color 0.3s ease-in-out;
-}
-.navlinks > a:hover {
-    color: #d9aaff;
-}
-#btns {
     display: flex;
-    margin-left: auto;
-    padding-right: 15px;
+    margin: 0 20px;
     align-items: center;
-    visibility: visible;
-}
-.homeBtns {
-    margin-left: 2px;
-    margin-right: 5px;
-    background-color: rgba(255, 255, 255, 0);
-    color: #b2d1fa;
-    font-size: 11px;
-    border-style: none;
-    border: 1px solid #b2d1fa;
-    border-radius: 5px;
-    outline: none;
-    width: 60px;
-    height: 26px;
-    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
-    font-family: 'Montserrat', sans-serif;
-}
-.homeBtns:hover {
-    border: 1px solid #d9aaff;
-    color: #d9aaff;
-}
+    border: 2px solid red;
 
+    a {
+        text-decoration: none;
+        color: #b2d1fa;
+        font-size: 10px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    a:hover {
+        color: #d9aaff;
+    }
+
+}
 
 /* mobile navbar */
 #navMobile {
@@ -103,13 +94,15 @@ nav > ul {
     height: 100vh;
     background-color: rgb(10, 9, 15);
     z-index: 10;
+
+    ul {
+        width: 100%;
+        text-align: right;
+        list-style: none;
+        transform: translateY(60px);
+    }
 }
-#rectArea > ul {
-    width: 100%;
-    text-align: right;
-    list-style: none;
-    transform: translateY(60px);
-}
+
 .navlinksMob {
     line-height: 70px;
 }
@@ -118,30 +111,29 @@ nav > ul {
     text-decoration: none;
     color: #b2d1fa;
     font-size: 12px;
+
+    &:hover {
+        color: #d9aaff;
+    }
 }
-#rectArea > ul > li > a:hover{
-    color: #d9aaff;
-}
+
 .burger {
-    width: 36px;
-    height: 26px;
+    width: 2.2rem;
+    height: 1.8rem;
     border: 1px solid #b2d1fa;
     border-radius: 5px;
     font-size: 20px;
     background-color: #ffffff00;
     color: #b2d1fa;
     outline: none;
-    position: fixed;
-    top: 12px;
-    right: 20px;
     z-index: 25;
     visibility: collapse;
     transition: color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
 
-.burger:hover {
-    color: #d9aaff;
-    border: 1px solid #d9aaff;
+    &:hover {
+        color: #d9aaff;
+        border: 1px solid #d9aaff;
+    }
 }
 
 #blocker {

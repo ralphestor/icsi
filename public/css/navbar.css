@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,6 @@ body {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#0b0746), to(#125e38));
   background-image: linear-gradient(to bottom right, #0b0746, #125e38);
   background-attachment: fixed;
-  font-family: 'Montserrat', sans-serif;
 }
 
 /* navbar css */
@@ -21,47 +19,64 @@ nav {
   position: fixed;
   display: -ms-grid;
   display: grid;
-  height: 50px;
+  height: 60px;
   width: 100%;
-  -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
+  -ms-grid-columns: 200px calc(100% - 200px);
+      grid-template-columns: 200px calc(100% - 200px);
   z-index: 98;
+  border: 2px solid red;
 }
 
-nav > div {
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-nav > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding-right: 30px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   list-style: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   visibility: visible;
+  border: 2px solid red;
+  margin: auto 0;
 }
 
 #companyLbl {
-  margin: auto 0;
-  font-family: 'Kanit', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Gilda Display', serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
+  height: 100%;
+  width: 100%;
+  border: 2px solid red;
 }
 
-#companyLbl > a {
+#companyLbl a {
   text-decoration: none;
   color: #7bcee7;
+  border: 2px solid red;
 }
 
 .navlinks {
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid red;
 }
 
-.navlinks > a {
+.navlinks a {
   text-decoration: none;
   color: #b2d1fa;
   font-size: 10px;
@@ -69,41 +84,7 @@ nav > ul {
   transition: color 0.3s ease-in-out;
 }
 
-.navlinks > a:hover {
-  color: #d9aaff;
-}
-
-#btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-  padding-right: 15px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  visibility: visible;
-}
-
-.homeBtns {
-  margin-left: 2px;
-  margin-right: 5px;
-  background-color: rgba(255, 255, 255, 0);
-  color: #b2d1fa;
-  font-size: 11px;
-  border-style: none;
-  border: 1px solid #b2d1fa;
-  border-radius: 5px;
-  outline: none;
-  width: 60px;
-  height: 26px;
-  -webkit-transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.homeBtns:hover {
-  border: 1px solid #d9aaff;
+.navlinks a:hover {
   color: #d9aaff;
 }
 
@@ -130,7 +111,7 @@ nav > ul {
   z-index: 10;
 }
 
-#rectArea > ul {
+#rectArea ul {
   width: 100%;
   text-align: right;
   list-style: none;
@@ -154,17 +135,14 @@ nav > ul {
 }
 
 .burger {
-  width: 36px;
-  height: 26px;
+  width: 2.2rem;
+  height: 1.8rem;
   border: 1px solid #b2d1fa;
   border-radius: 5px;
   font-size: 20px;
   background-color: #ffffff00;
   color: #b2d1fa;
   outline: none;
-  position: fixed;
-  top: 12px;
-  right: 20px;
   z-index: 25;
   visibility: collapse;
   -webkit-transition: color 0.3s ease-in-out, color 0.3s ease-in-out;
