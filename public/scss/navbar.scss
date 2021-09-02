@@ -24,13 +24,14 @@ nav {
     grid-template-columns: 40% 60%;
     z-index: 98;
 }
-nav > div {
+nav div {
     display: flex;
+
 }
-nav > ul {
+nav ul {
     display: flex;
-    list-style: none;
     align-items: center;
+    list-style: none;
     visibility: visible;
 }
 
@@ -40,7 +41,7 @@ nav > ul {
     font-weight: 500;
     font-size: 16px;
 }
-#companyLbl > a {
+#companyLbl a {
     text-decoration: none;
     color: #7bcee7;
 }
