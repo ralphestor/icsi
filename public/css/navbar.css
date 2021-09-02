@@ -28,20 +28,20 @@ nav {
   z-index: 98;
 }
 
-nav > div {
+nav div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav > ul {
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  list-style: none;
   visibility: visible;
 }
 
@@ -52,12 +52,18 @@ nav > ul {
   font-size: 16px;
 }
 
-#companyLbl > a {
+#companyLbl a {
   text-decoration: none;
   color: #7bcee7;
 }
 
 .navlinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
 }
 
