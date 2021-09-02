@@ -1,23 +1,11 @@
 footer {
-    display: block;
+    display: flex;
     text-align: center;
-    margin: auto 0;
+    justify-content: center;
+    align-items: center;
     height: 120px;
     background-color: rgb(10, 9, 15);
     color: #ffffffb7;
-}
-
-footer > img {
-    margin-top: 20px;
-    width: 40px;
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    filter: grayscale(100%); 
-}
-footer > div {
-    transform: translateY(-8px);
 }
 
 footer > div > h4 {
