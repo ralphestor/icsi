@@ -1,0 +1,32 @@
+footer {
+  display: block;
+  text-align: center;
+  margin: auto 0;
+  height: 120px;
+  background-color: #0a090f;
+  color: #ffffffb7;
+}
+
+footer > img {
+  margin-top: 20px;
+  width: 40px;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+footer > div {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+footer > div > h4 {
+  font-size: 12px;
+}
+
+footer > div > p {
+  font-size: 9px;
+}
+/*# sourceMappingURL=footer.css.map */
