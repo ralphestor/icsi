@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,12 +20,11 @@ nav {
   position: fixed;
   display: -ms-grid;
   display: grid;
-  height: 60px;
+  height: 64px;
   width: 100%;
-  -ms-grid-columns: 200px calc(100% - 200px);
-      grid-template-columns: 200px calc(100% - 200px);
+  -ms-grid-columns: 300px calc(100% - 300px);
+      grid-template-columns: 300px calc(100% - 300px);
   z-index: 98;
-  border: 2px solid red;
 }
 
 nav ul {
@@ -40,11 +40,34 @@ nav ul {
       -ms-flex-align: center;
           align-items: center;
   visibility: visible;
-  border: 2px solid red;
-  margin: auto 0;
 }
 
-#companyLbl {
+nav ul .navlinks {
+  margin: 0 20px;
+}
+
+nav ul .navlinks a {
+  text-decoration: none;
+  color: #FFFFFF;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+}
+
+nav ul .navlinks a:hover {
+  color: #3183ff;
+}
+
+nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 64px;
+  padding-left: 20px;
+}
+
+nav div a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,40 +75,21 @@ nav ul {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Gilda Display', serif;
-  font-weight: 500;
-  font-size: 1rem;
-  height: 100%;
-  width: 100%;
-  border: 2px solid red;
-}
-
-#companyLbl a {
+  font-size: 0.6rem;
   text-decoration: none;
-  color: #7bcee7;
-  border: 2px solid red;
 }
 
-.navlinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 2px solid red;
+nav div a .logoImg {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 54px;
 }
 
-.navlinks a {
-  text-decoration: none;
-  color: #b2d1fa;
-  font-size: 10px;
-  -webkit-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
-}
-
-.navlinks a:hover {
-  color: #d9aaff;
+nav div a h1 {
+  text-align: center;
+  color: #FFFFFF;
+  width: 170px;
 }
 
 /* mobile navbar */
@@ -96,6 +100,21 @@ nav ul {
   z-index: 99;
 }
 
+#navMobile #rectArea {
+  width: 180px;
+  height: 100vh;
+  background-color: #0a090f;
+  z-index: 10;
+}
+
+#navMobile #rectArea ul {
+  width: 100%;
+  text-align: right;
+  list-style: none;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+
 .displayShow {
   display: block;
 }
@@ -104,44 +123,39 @@ nav ul {
   display: none;
 }
 
-#rectArea {
-  width: 40vw;
-  height: 100vh;
-  background-color: #0a090f;
-  z-index: 10;
-}
-
-#rectArea ul {
-  width: 100%;
-  text-align: right;
-  list-style: none;
-  -webkit-transform: translateY(60px);
-          transform: translateY(60px);
-}
-
 .navlinksMob {
   line-height: 70px;
 }
 
-#rectArea > ul > li > a {
-  margin-right: 20px;
+.navlinksMob a {
+  display: block;
+  padding-right: 20px;
   text-decoration: none;
-  color: #b2d1fa;
-  font-size: 12px;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  width: 100%;
 }
 
-#rectArea > ul > li > a:hover {
-  color: #d9aaff;
+.navlinksMob a:hover {
+  color: #091A47;
+  background-color: #3183ff;
 }
 
 .burger {
+  position: fixed;
+  right: 20px;
+  top: 32px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: auto 0;
   width: 2.2rem;
   height: 1.8rem;
-  border: 1px solid #b2d1fa;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   font-size: 20px;
   background-color: #ffffff00;
-  color: #b2d1fa;
+  color: #ffffff;
   outline: none;
   z-index: 25;
   visibility: collapse;
@@ -149,9 +163,14 @@ nav ul {
   transition: color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.burger:hover {
-  color: #d9aaff;
-  border: 1px solid #d9aaff;
+.burgerEnter:hover {
+  color: #3183ff;
+  border: 1px solid #3183ff;
+}
+
+.burgerExit:hover {
+  color: #9D0303;
+  border: 1px solid #9D0303;
 }
 
 #blocker {

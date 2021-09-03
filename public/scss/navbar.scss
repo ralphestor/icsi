@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 
 * {
@@ -18,11 +19,10 @@ nav {
     background-color: rgb(10, 9, 15);
     position: fixed;
     display: grid;
-    height: 60px;
+    height: 64px;
     width: 100%;
-    grid-template-columns: 200px calc(100% - 200px);
+    grid-template-columns: 300px calc(100% - 300px);
     z-index: 98;
-    border: 2px solid red;
 
     ul {
         display: flex;
@@ -31,50 +31,48 @@ nav {
         list-style: none;
         align-items: center;
         visibility: visible;
-        border: 2px solid red;
-        margin: auto 0;
+        
+        .navlinks {
+            margin: 0 20px;
+            a {
+                text-decoration: none;
+                color: #FFFFFF;
+                transition: color 0.3s ease-in-out;
+                font-family: 'Poppins', sans-serif;
+                font-size: 0.8rem;
+
+                &:hover {
+                    color: #3183ff;
+                }
+            }
+        }
     }
 
     div {
+        display: flex;
+        height: 64px;
+        padding-left: 20px;
+
+        a {
+            display: flex;
+            align-items: center;
+            font-family: 'Gilda Display', serif;
+            font-size: 0.6rem;
+            text-decoration: none;
+
+            .logoImg {
+                align-self: center;
+                height: 54px;
+            }
+            h1 {
+                text-align: center;
+                color: #FFFFFF;
+                width: 170px;
+            }
+        }
     }
 }
 
-#companyLbl {
-    display: flex;
-    align-items: center;
-    font-family: 'Gilda Display', serif;
-    font-weight: 500;
-    font-size: 1rem;
-    height: 100%;
-    width: 100%;
-    border: 2px solid red;
-
-    a {
-        text-decoration: none;
-        color: #7bcee7;
-        border: 2px solid red;
-
-    }
-}
-
-.navlinks {
-    display: flex;
-    margin: 0 20px;
-    align-items: center;
-    border: 2px solid red;
-
-    a {
-        text-decoration: none;
-        color: #b2d1fa;
-        font-size: 10px;
-        transition: color 0.3s ease-in-out;
-    }
-
-    a:hover {
-        color: #d9aaff;
-    }
-
-}
 
 /* mobile navbar */
 #navMobile {
@@ -82,57 +80,76 @@ nav {
     top: 0;
     right: 0;
     z-index: 99;
+
+    #rectArea {
+        width: 180px;
+        height: 100vh;
+        background-color: rgb(10, 9, 15);
+        z-index: 10;
+    
+        ul {
+            width: 100%;
+            text-align: right;
+            list-style: none;
+            transform: translateY(60px);
+        }
+    }
 }
+
 .displayShow {
     display: block;
 }
 .displayHide { 
     display: none;
 }
-#rectArea {
-    width: 40vw;
-    height: 100vh;
-    background-color: rgb(10, 9, 15);
-    z-index: 10;
 
-    ul {
-        width: 100%;
-        text-align: right;
-        list-style: none;
-        transform: translateY(60px);
-    }
-}
+
 
 .navlinksMob {
     line-height: 70px;
-}
-#rectArea > ul > li > a{
-    margin-right: 20px;
-    text-decoration: none;
-    color: #b2d1fa;
-    font-size: 12px;
 
-    &:hover {
-        color: #d9aaff;
-    }
+    a {
+        display: block;
+        padding-right: 20px;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.8rem;
+        width: 100%;
+
+        &:hover {
+            color: #091A47;
+            background-color: #3183ff;
+        }
+    } 
 }
 
 .burger {
+    position: fixed;
+    right: 20px;
+    top: 32px;
+    transform: translateY(-50%);
+    margin: auto 0;
     width: 2.2rem;
     height: 1.8rem;
-    border: 1px solid #b2d1fa;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     font-size: 20px;
     background-color: #ffffff00;
-    color: #b2d1fa;
+    color: #ffffff;
     outline: none;
     z-index: 25;
     visibility: collapse;
     transition: color 0.3s ease-in-out, color 0.3s ease-in-out;
 
-    &:hover {
-        color: #d9aaff;
-        border: 1px solid #d9aaff;
+    &Enter:hover {
+        color: #3183ff;
+        border: 1px solid #3183ff;
+    }
+
+    &Exit:hover {
+        color: #9D0303;
+        border: 1px solid #9D0303;
     }
 }
 
