@@ -8,10 +8,14 @@ const hideFunc = () => {
     blocker.style.display = "none";
 }
 
-burger[0].addEventListener('click', () => {
+const showFunc = () => {
     navMobile.classList.remove('displayHide');
     navMobile.classList.add('displayShow');
     blocker.style.display = "block";
+}
+
+burger[0].addEventListener('click', () => {
+    showFunc();
 });
 burger[1].addEventListener('click', hideFunc);
 
@@ -23,3 +27,6 @@ document.addEventListener('scroll', () => {
     }
 });
 
+window.addEventListener('resize', () => {
+    hideFunc(0);
+});

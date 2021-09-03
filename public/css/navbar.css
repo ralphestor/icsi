@@ -9,8 +9,8 @@
 
 body {
   height: 100vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#0b0746), to(#125e38));
-  background-image: linear-gradient(to bottom right, #0b0746, #125e38);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#091A47), to(#000000));
+  background-image: linear-gradient(to bottom, #091A47, #000000);
   background-attachment: fixed;
 }
 
@@ -103,7 +103,7 @@ nav div a h1 {
 #navMobile #rectArea {
   width: 180px;
   height: 100vh;
-  background-color: #0a090f;
+  background-color: black;
   z-index: 10;
 }
 
