@@ -1,16 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 footer {
     display: flex;
-    text-align: center;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     height: 120px;
     background-color: rgb(10, 9, 15);
     color: #ffffffb7;
-}
+    padding: 0 20px;
 
-footer > div > h4 {
-    font-size: 12px;
-}
-footer > div > p {
-    font-size: 9px;
+    img {
+        height: 80px;
+        filter: grayscale(100%);
+    }
+
+    div {
+        h4 {
+            font-family: 'Gilda Display', serif;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+        }
+    }
 }
