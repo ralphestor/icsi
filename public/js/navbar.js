@@ -1,32 +1,26 @@
-const burger = document.querySelectorAll('.burger');
-const navMobile = document.querySelector('#navMobile');
-const blocker = document.querySelector('#blocker');
-
-const hideFunc = () => {
-    navMobile.classList.remove('displayShow');
-    navMobile.classList.add('displayHide');
-    blocker.style.display = "none";
-}
-
-const showFunc = () => {
-    navMobile.classList.remove('displayHide');
-    navMobile.classList.add('displayShow');
-    blocker.style.display = "block";
-}
-
-burger[0].addEventListener('click', () => {
-    showFunc();
-});
-burger[1].addEventListener('click', hideFunc);
-
-blocker.addEventListener('click', hideFunc);
-
-document.addEventListener('scroll', () => {
-    if (navMobile.classList.contains('displayShow')) {
-        hideFunc();
+$(document).ready(() => {
+    const burger = $('.burger');
+    const navMobile = $('#navMobile');
+    const blocker = $('#blocker');
+    
+    const hideFunc = () => {
+        navMobile.removeClass('displayShow');
+        navMobile.addClass('displayHide');
+        blocker.css('display', 'none');
     }
-});
-
-window.addEventListener('resize', () => {
-    hideFunc(0);
+    
+    const showFunc = () => {
+        navMobile.removeClass('displayHide');
+        navMobile.addClass('displayShow');
+        blocker.css('display', 'block');
+    }
+    
+    burger[0].addEventListener('click', showFunc);
+    
+    blocker.click(hideFunc);
+    
+    window.addEventListener('resize', () => {
+        hideFunc();
+    });
+    
 });

@@ -22,6 +22,10 @@ footer img {
           filter: grayscale(100%);
 }
 
+footer div {
+  width: 300px;
+}
+
 footer div h4 {
   font-family: 'Gilda Display', serif;
   font-size: 12px;

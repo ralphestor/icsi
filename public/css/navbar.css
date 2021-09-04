@@ -24,7 +24,7 @@ nav {
   width: 100%;
   -ms-grid-columns: 300px calc(100% - 300px);
       grid-template-columns: 300px calc(100% - 300px);
-  z-index: 98;
+  z-index: 5;
 }
 
 nav ul {
@@ -97,14 +97,13 @@ nav div a h1 {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 99;
+  z-index: 11;
 }
 
 #navMobile #rectArea {
   width: 180px;
   height: 100vh;
   background-color: black;
-  z-index: 10;
 }
 
 #navMobile #rectArea ul {
@@ -155,12 +154,12 @@ nav div a h1 {
   font-size: 20px;
   background-color: #ffffff00;
   outline: none;
-  z-index: 25;
   visibility: collapse;
   -webkit-transition: color 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, color 0.3s ease-in-out;
   color: #ffffff;
   border: 1px solid #ffffff;
+  z-index: 20;
 }
 
 .burgerEnter:hover {
@@ -169,8 +168,8 @@ nav div a h1 {
 }
 
 .burgerExit:hover {
-  color: #9D0303;
-  border: 1px solid #9D0303;
+  color: #3183ff;
+  border: 1px solid #3183ff;
 }
 
 #blocker {
@@ -178,7 +177,7 @@ nav div a h1 {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 15;
+  z-index: 9;
   top: 0;
   display: none;
 }
