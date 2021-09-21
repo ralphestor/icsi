@@ -134,6 +134,8 @@ nav div a h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 0.8rem;
   width: 100%;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 
 .navlinksMob a:hover {
