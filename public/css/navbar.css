@@ -173,13 +173,12 @@ nav div a h1 {
 }
 
 #blocker {
-  background-color: #00000080;
+  background-color: #00000075;
   position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: 9;
   top: 0;
-  display: none;
 }
 
 @media (max-width: 768px) {
