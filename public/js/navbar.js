@@ -12,5 +12,13 @@ $(document).ready(() => {
         navMobile.toggleClass('displayShow displayHide');
         blocker.toggleClass('displayShow displayHide');
     })
+
+    $(function () {
+        $(document).scroll(function () {
+            var nav = $('nav');
+            nav.toggleClass('scrolled', $(this).scrollTop() > nav.height());
+        });
+    });
+
 });
 

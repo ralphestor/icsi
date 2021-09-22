@@ -16,13 +16,14 @@ body {
 
 /* navbar css */
 nav {
-    background-color: rgb(10, 9, 15);
+    background-color: rgba(10, 9, 15, 0);
     position: fixed;
     display: grid;
     height: 64px;
     width: 100%;
     grid-template-columns: 300px calc(100% - 300px);
     z-index: 5;
+    transition: background-color 300ms ease-in-out;
 
     ul {
         display: flex;
@@ -36,10 +37,11 @@ nav {
             margin: 0 20px;
             a {
                 text-decoration: none;
-                color: #FFFFFF;
+                color: #ffffff;
                 transition: color 0.3s ease-in-out;
                 font-family: 'Poppins', sans-serif;
                 font-size: 0.8rem;
+                font-weight: 500;
 
                 &:hover {
                     color: #3183ff;
@@ -66,13 +68,24 @@ nav {
             }
             h1 {
                 text-align: center;
-                color: #FFFFFF;
+                color: #ffffff;
                 width: 170px;
+                transition: color 300ms ease-in-out;
             }
         }
     }
 }
 
+nav.scrolled {
+    background-color: rgb(10, 9, 15) !important;
+    
+    div a h1{
+        color: #ffffff !important;
+    }
+    ul .navlinks a {
+        color: #ffffff !important;
+    }
+}
 
 /* mobile navbar */
 #navMobile {

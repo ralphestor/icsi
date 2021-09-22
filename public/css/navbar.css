@@ -16,7 +16,7 @@ body {
 
 /* navbar css */
 nav {
-  background-color: #0a090f;
+  background-color: rgba(10, 9, 15, 0);
   position: fixed;
   display: -ms-grid;
   display: grid;
@@ -25,6 +25,8 @@ nav {
   -ms-grid-columns: 300px calc(100% - 300px);
       grid-template-columns: 300px calc(100% - 300px);
   z-index: 5;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 nav ul {
@@ -48,11 +50,12 @@ nav ul .navlinks {
 
 nav ul .navlinks a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
   font-family: 'Poppins', sans-serif;
   font-size: 0.8rem;
+  font-weight: 500;
 }
 
 nav ul .navlinks a:hover {
@@ -88,8 +91,22 @@ nav div a .logoImg {
 
 nav div a h1 {
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 170px;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+nav.scrolled {
+  background-color: #0a090f !important;
+}
+
+nav.scrolled div a h1 {
+  color: #ffffff !important;
+}
+
+nav.scrolled ul .navlinks a {
+  color: #ffffff !important;
 }
 
 /* mobile navbar */

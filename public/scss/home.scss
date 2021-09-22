@@ -1,3 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 main {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/homebg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
+
+    div {
+        width: 600px;
+        text-align: center;
+
+        h4 {
+            width: 500px;
+            margin: 0 auto;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        p {
+            padding: 10px 0;
+            font-family: 'Poppins', serif;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            outline: none;
+            font-family: 'Poppins', serif;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            background-color: rgb(124, 231, 114);
+            transition: background-color 300ms ease-in-out;
+
+            &:hover {
+                background-color: rgb(57, 114, 60);
+            }
+        }
+    }
+}
+
+section {
+    height: 1000px;
 }
