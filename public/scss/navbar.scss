@@ -142,8 +142,9 @@ nav.scrolled {
     top: 32px;
     transform: translateY(-50%);
     margin: auto 0;
-    width: 2.2rem;
-    height: 1.8rem;
+    padding: auto 0;
+    width: 2.6rem;
+    height: 2.2rem;
     border-radius: 5px;
     font-size: 20px;
     background-color: #ffffff00;
@@ -154,14 +155,15 @@ nav.scrolled {
     border: 1px solid #ffffff;
     z-index: 20;
 
-    &Enter:hover {
-        color: #3183ff;
-        border: 1px solid #3183ff;
-    }
-    &Exit:hover {
-        color: #3183ff;
-        border: 1px solid #3183ff;
-    }
+}
+
+.bHover:hover {
+    color: #3183ff;
+    border: 1px solid #3183ff;
+}
+.xHover:hover {
+    color: #a70000;
+    border: 1px solid #a70000;
 }
 
 #blocker {
@@ -183,5 +185,11 @@ nav.scrolled {
     }
     #btns {
         visibility: collapse;
+    }
+}
+
+@media (max-width: 320px) {
+    nav div a h1 {
+        display: none;
     }
 }

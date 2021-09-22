@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import './variables';
+
+
+
 
 main {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/homebg.jpg);
@@ -16,12 +20,39 @@ main {
         width: 600px;
         text-align: center;
 
+        @include laptops {
+            width: 500px;
+        }
+
+        @include tablets {
+            width: 80%;
+        }
+        @include phones {
+            width: 90%;
+        }
+
         h4 {
             width: 500px;
             margin: 0 auto;
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
             color: #ffffff;
+
+            @include laptops {
+                width: 450px;
+                font-size: 1.8rem;
+            }
+
+            @include tablets {
+                width: 70%;
+                font-size: 1.6rem;
+            }
+            @include phones {
+                width: 80%;
+                font-size: 1rem;
+            }
+            
+    
         }
 
         p {
@@ -29,6 +60,20 @@ main {
             font-family: 'Poppins', serif;
             font-size: 1rem;
             color: #ffffff;
+            margin: 0 auto;
+
+            @include laptops {
+                font-size: 0.9rem;
+            }
+
+            @include tablets {
+                width: 70%;
+                font-size: 0.8rem;
+            }
+            @include phones {
+                width: 80%;
+                font-size: 0.6rem;
+            }
         }
 
         button {
@@ -39,11 +84,28 @@ main {
             font-size: 1rem;
             border: none;
             border-radius: 25px;
-            background-color: rgb(85, 228, 92);
+            background-color: rgb(38, 228, 101);
             transition: background-color 300ms ease-in-out;
 
             &:hover {
-                background-color: rgb(57, 114, 60);
+                background-color: rgb(19, 167, 68);
+            }
+
+            @include laptops {
+                width: 120px;
+                height: 40px;
+                font-size: 0.9rem;
+            }
+
+            @include tablets {
+                width: 100px;
+                height: 30px;
+                font-size: 0.8rem;
+            }
+            @include phones {
+                width: 80px;
+                height: 20px;
+                font-size: 0.6rem;
             }
         }
     }
@@ -53,23 +115,26 @@ section {
     height: 1000px;
 }
 
-@media (max-width: 768px) {
-    main div {
-        width: 350px;
-        h4 
-            font-size: 1.5rem;
-            width: 300px;
-        }
 
-        p {
-            font-size: 0.8rem;
-            width: 300px;
-        }
 
-        button {
-            height: 35px;
-            width: 120px;
-            font-size: 0.8rem;
-        }
-    }
-}
+//portrait phones
+// @media (min-width: 576px) {
+//     main div {
+//         width: 420px;
+//         h4 {
+//             font-size: 1.8rem;
+//             width: 420px;
+//         }
+
+//         p {
+//             font-size: 0.9rem;
+//             width: 400px;
+//         }
+
+//         button {
+//             height: 35px;
+//             width: 120px;
+//             font-size: 0.9rem;
+//         }
+//     }
+// }

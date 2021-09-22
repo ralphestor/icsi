@@ -167,8 +167,9 @@ nav.scrolled ul .navlinks a {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin: auto 0;
-  width: 2.2rem;
-  height: 1.8rem;
+  padding: auto 0;
+  width: 2.6rem;
+  height: 2.2rem;
   border-radius: 5px;
   font-size: 20px;
   background-color: #ffffff00;
@@ -181,14 +182,14 @@ nav.scrolled ul .navlinks a {
   z-index: 20;
 }
 
-.burgerEnter:hover {
+.bHover:hover {
   color: #3183ff;
   border: 1px solid #3183ff;
 }
 
-.burgerExit:hover {
-  color: #3183ff;
-  border: 1px solid #3183ff;
+.xHover:hover {
+  color: #a70000;
+  border: 1px solid #a70000;
 }
 
 #blocker {
@@ -210,6 +211,12 @@ nav.scrolled ul .navlinks a {
   }
   #btns {
     visibility: collapse;
+  }
+}
+
+@media (max-width: 320px) {
+  nav div a h1 {
+    display: none;
   }
 }
 /*# sourceMappingURL=navbar.css.map */

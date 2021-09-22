@@ -24,6 +24,24 @@ main div {
   text-align: center;
 }
 
+@media (max-width: 1279px) {
+  main div {
+    width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  main div {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  main div {
+    width: 90%;
+  }
+}
+
 main div h4 {
   width: 500px;
   margin: 0 auto;
@@ -32,11 +50,53 @@ main div h4 {
   color: #ffffff;
 }
 
+@media (max-width: 1279px) {
+  main div h4 {
+    width: 450px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main div h4 {
+    width: 70%;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main div h4 {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
 main div p {
   padding: 10px 0;
   font-family: 'Poppins', serif;
   font-size: 1rem;
   color: #ffffff;
+  margin: 0 auto;
+}
+
+@media (max-width: 1279px) {
+  main div p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main div p {
+    width: 70%;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main div p {
+    width: 80%;
+    font-size: 0.6rem;
+  }
 }
 
 main div button {
@@ -47,34 +107,40 @@ main div button {
   font-size: 1rem;
   border: none;
   border-radius: 25px;
-  background-color: #55e45c;
+  background-color: #26e465;
   -webkit-transition: background-color 300ms ease-in-out;
   transition: background-color 300ms ease-in-out;
 }
 
 main div button:hover {
-  background-color: #39723c;
+  background-color: #13a744;
+}
+
+@media (max-width: 1279px) {
+  main div button {
+    width: 120px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main div button {
+    width: 100px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main div button {
+    width: 80px;
+    height: 20px;
+    font-size: 0.6rem;
+  }
 }
 
 section {
   height: 1000px;
-}
-
-@media (max-width: 768px) {
-  main div {
-    width: 400px;
-  }
-  main div h4 {
-    font-size: 1.5rem;
-    width: 400px;
-  }
-  main div p {
-    font-size: 0.8rem;
-  }
-  main div button {
-    height: 35px;
-    width: 120px;
-    font-size: 0.8rem;
-  }
 }
 /*# sourceMappingURL=home.css.map */
