@@ -47,7 +47,7 @@ main div button {
   font-size: 1rem;
   border: none;
   border-radius: 25px;
-  background-color: #7ce772;
+  background-color: #55e45c;
   -webkit-transition: background-color 300ms ease-in-out;
   transition: background-color 300ms ease-in-out;
 }
@@ -58,5 +58,23 @@ main div button:hover {
 
 section {
   height: 1000px;
+}
+
+@media (max-width: 768px) {
+  main div {
+    width: 400px;
+  }
+  main div h4 {
+    font-size: 1.5rem;
+    width: 400px;
+  }
+  main div p {
+    font-size: 0.8rem;
+  }
+  main div button {
+    height: 35px;
+    width: 120px;
+    font-size: 0.8rem;
+  }
 }
 /*# sourceMappingURL=home.css.map */

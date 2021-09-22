@@ -39,7 +39,7 @@ main {
             font-size: 1rem;
             border: none;
             border-radius: 25px;
-            background-color: rgb(124, 231, 114);
+            background-color: rgb(85, 228, 92);
             transition: background-color 300ms ease-in-out;
 
             &:hover {
@@ -51,4 +51,25 @@ main {
 
 section {
     height: 1000px;
+}
+
+@media (max-width: 768px) {
+    main div {
+        width: 350px;
+        h4 
+            font-size: 1.5rem;
+            width: 300px;
+        }
+
+        p {
+            font-size: 0.8rem;
+            width: 300px;
+        }
+
+        button {
+            height: 35px;
+            width: 120px;
+            font-size: 0.8rem;
+        }
+    }
 }
