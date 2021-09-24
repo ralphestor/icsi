@@ -8,9 +8,7 @@
 }
 
 body {
-    height: 100vh;
-    background-image: linear-gradient(to bottom, #091A47, #000000);
-    background-attachment: fixed;
+    background-color: #d4d18c;
 }
 
 /* navbar css */
@@ -93,9 +91,10 @@ nav.scrolled {
     right: 0;
     z-index: 11;
 
+
     #rectArea {
         width: 180px;
-        height: 100vh;
+        height: 100%;
         background-color: rgb(0, 0, 0);
     
         ul {

@@ -8,10 +8,7 @@
 }
 
 body {
-  height: 100vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#091A47), to(#000000));
-  background-image: linear-gradient(to bottom, #091A47, #000000);
-  background-attachment: fixed;
+  background-color: #d4d18c;
 }
 
 /* navbar css */
@@ -119,7 +116,7 @@ nav.scrolled ul .navlinks a {
 
 #navMobile #rectArea {
   width: 180px;
-  height: 100vh;
+  height: 100%;
   background-color: black;
 }
 

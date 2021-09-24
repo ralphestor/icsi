@@ -14,6 +14,26 @@ app.get('/', (req, res, next) => {
     res.render('home');
 });
 
+app.get('/about', (req, res, next) => {
+    res.render('about');
+});
+
+app.get('/admission', (req, res, next) => {
+    res.render('admission');
+});
+
+app.get('/contact', (req, res, next) => {
+    res.render('contact');
+});
+
+app.get('/articles', (req, res, next) => {
+    res.render('articles');
+});
+
+app.get('/new_article', (req, res, next) => {
+    res.render('./admin/newpost');
+});
+
 app.listen(8000, () => {
     try {
         console.log('listening to port 8000!');
