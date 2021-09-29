@@ -48,6 +48,7 @@ main div h4 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   color: #ffffff;
+  text-shadow: 2px 2px 8px #000000;
 }
 
 @media (max-width: 1279px) {
@@ -77,6 +78,7 @@ main div p {
   font-size: 1rem;
   color: #ffffff;
   margin: 0 auto;
+  text-shadow: 2px 2px 8px #000000;
 }
 
 @media (max-width: 1279px) {
@@ -110,6 +112,9 @@ main div button {
   background-color: #4fc777;
   -webkit-transition: background-color 300ms ease-in-out;
   transition: background-color 300ms ease-in-out;
+  -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 
 main div button:hover {
@@ -140,7 +145,13 @@ main div button:hover {
   }
 }
 
-section {
-  height: 1000px;
+section div .homeCards {
+  width: 400px;
+  border: 2px solid red;
+}
+
+section div .homeCards img {
+  width: 80%;
+  padding: 10px auto;
 }
 /*# sourceMappingURL=home.css.map */
