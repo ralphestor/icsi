@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #d4d18c;
+  background-color: #ffffff;
 }
 
 /* navbar css */
@@ -109,6 +109,7 @@ nav.scrolled ul .navlinks a {
 /* mobile navbar */
 #navMobile {
   position: fixed;
+  height: 100vh;
   top: 0;
   right: 0;
   z-index: 11;
@@ -187,6 +188,28 @@ nav.scrolled ul .navlinks a {
 .xHover:hover {
   color: #a70000;
   border: 1px solid #a70000;
+}
+
+.navBtn {
+  height: 40px;
+  width: 100px;
+  margin: 5px;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-size: 0.8rem;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.loginBtn {
+  border: 1px solid #001570;
+  background-color: #245af0;
+}
+
+.logoutBtn {
+  border: 1px solid #690000;
+  background-color: #df3131;
 }
 
 #blocker {

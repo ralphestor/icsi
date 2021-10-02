@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
 main {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../images/homebg.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/homebg.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../images/home2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/home2.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -109,16 +109,18 @@ main div button {
   font-size: 1rem;
   border: none;
   border-radius: 25px;
-  background-color: #4fc777;
-  -webkit-transition: background-color 300ms ease-in-out;
-  transition: background-color 300ms ease-in-out;
-  -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  background-color: #23e75e;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 
 main div button:hover {
-  background-color: #13a744;
+  background-color: #1d9e48;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 1279px) {
@@ -145,13 +147,79 @@ main div button:hover {
   }
 }
 
-section div .homeCards {
-  width: 400px;
-  border: 2px solid red;
+section h4 {
+  text-align: center;
+  padding: 40px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
 }
 
-section div .homeCards img {
-  width: 80%;
+section #cardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section #cardContainer .homeCards {
+  width: 400px;
+  background-color: #d4d18c;
+  text-align: center;
+  padding: 20px;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+section #cardContainer .homeCards img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
   padding: 10px auto;
+}
+
+section #cardContainer .homeCards h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+section #cardContainer .homeCards p {
+  font-family: 'Poppins', serif;
+  font-size: 1rem;
+}
+
+section #articlesBtn {
+  width: 120px;
+  height: 40px;
+  outline: none;
+  font-family: 'Poppins', serif;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  background-color: #0856ff;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+section #articlesBtn:hover {
+  background-color: #003097;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+#articlesHome {
+  text-align: center;
 }
 /*# sourceMappingURL=home.css.map */

@@ -1,0 +1,15 @@
+.mainTitle {
+  text-align: center;
+  padding: 40px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+#headerImg {
+  width: 100vw;
+  height: 300px;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=articles.css.map */
