@@ -33,17 +33,12 @@ form {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin: 10px 0;
 
             @include tablets {
                 flex-direction: column;
-                text-align: center;
             }
         }
         
-        .authorInput, .positionInput {
-            width: 40%;
-        }
 
         input {
             min-width: 500px;
@@ -53,15 +48,28 @@ form {
 
             @include tablets {
                 min-width: 0;
-                width: 75%;
+                width: 80%;
             }
 
         }
 
+        .authorInput, .positionInput {
+            min-width: 0;
+            width: 40%;
+            margin: 10px;
+
+            @include tablets {
+                flex-direction: column;
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+
+
         textarea {
             font-family: 'Poppins', sans-serif;
             font-size: 1rem;
-            width: 75%;
+            width: 80%;
             min-height: 250px;
             height: auto;
             resize: none;
@@ -92,8 +100,7 @@ form {
     }
 
     .authorBtn {
-        height: 2rem;
-        width: 2rem;
+        padding: 8px;
         border-radius: 50%;
         outline: none;
         font-family: 'Poppins', serif;

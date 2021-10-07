@@ -84,15 +84,16 @@ main {
             outline: none;
             font-family: 'Poppins', serif;
             font-size: 1rem;
+            color: #ffffff;
             border: none;
             border-radius: 25px;
-            background-color: rgb(35, 231, 94);
+            background-color: rgb(22, 185, 71);
             transition: 300ms ease-in-out;
             box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
             cursor: pointer;
 
             &:hover {
-                background-color: rgb(29, 158, 72);
+                background-color: rgb(50, 150, 83);
                 box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
             }
 

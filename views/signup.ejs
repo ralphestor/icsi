@@ -1,0 +1,27 @@
+<%- include('./partials/htmlTop') %>
+<link rel="stylesheet" href="./css/navbar.css">
+<link rel="stylesheet" href="./css/footer.css">
+<link rel="stylesheet" href="./css/contact.css">
+<%- include('./partials/navbar') %>
+<header>
+    <img id="headerImg" src="./images/contact.jpg" alt="Contact">
+    <h1 class="mainTitle">Admin Sign Up</h1>
+</header>
+<form action="" method="post">
+    <div>
+        <label for="emailInput">Email</label>
+        <input type="email" name="email" id="emailInput">
+    </div>
+    <div>
+        <label for="passInput">Password</label>
+        <input type="password" name="password" id="passInput">
+    </div>
+    <div>
+        <label for="idCodeInput">School ID Code</label>
+        <input type="text" name="idCode" id="idCodeInput">
+    </div>
+    <button type="submit">Sign Up</button>
+    <a href="/login">Log In</a>
+</form>
+<%- include('./partials/footer') %>
+<%- include('./partials/htmlBottom') %>

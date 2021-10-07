@@ -34,6 +34,15 @@ app.get('/new_article', (req, res, next) => {
     res.render('./admin/newpost');
 });
 
+app.get('/login', (req, res, next) => {
+    res.render('./login');
+});
+
+app.get('/signup', (req, res, next) => {
+    res.render('./signup');
+});
+
+
 app.listen(8000, () => {
     try {
         console.log('listening to port 8000!');
