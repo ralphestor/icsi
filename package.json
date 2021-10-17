@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ralphestor/icsi#readme",
   "dependencies": {
     "ejs-mate": "^3.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^6.0.9"
   }
 }
