@@ -11,3 +11,21 @@
     background-position: center;
     object-fit: cover;
 }
+
+main {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0 100px;
+    font-family: 'Poppins', serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    div {
+        margin-bottom: 40px;
+        h5 {
+            margin-bottom: 5px;
+            font-size: 1.25rem;
+        }
+    }
+}

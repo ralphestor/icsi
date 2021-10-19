@@ -25,6 +25,12 @@ form {
             font-size: 1rem;
         }
 
+        #numAuthorsInput {
+            min-width: 0;
+            width: 50px;
+            text-align: center;
+        }
+
         #firstLbl, #secondLbl {
             display: inline;
         }
@@ -99,36 +105,6 @@ form {
         }
     }
 
-    .authorBtn {
-        padding: 8px;
-        border-radius: 50%;
-        outline: none;
-        font-family: 'Poppins', serif;
-        font-size: 1rem;
-        color: white;
-        border: none;
-        border-radius: 25px;
-        transition: 300ms ease-in-out;
-        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
-        cursor: pointer;
-        margin: 0 10px;
-    }
 
-    .minusAuthor {
-        background-color: rgb(255, 13, 13);
-
-        &:hover {
-            background-color: rgb(167, 7, 7);
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
-        }
-    }
-
-    .addAuthor {
-        background-color: rgb(8, 86, 255);
-        &:hover {
-            background-color: rgb(1, 53, 165);
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
-        }
-    }
-    
 }
+

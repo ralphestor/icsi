@@ -11,3 +11,16 @@
     background-position: center;
     object-fit: cover;
 }
+
+main div{
+    margin-left: 100px;
+    margin-bottom: 50px;
+
+    h3 {
+        font-family: 'Poppins', serif;
+        font-size: 1rem;
+        span {
+            font-weight: 400;
+        }
+    }
+}

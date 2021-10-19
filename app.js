@@ -19,10 +19,6 @@ app.get('/about', (req, res, next) => {
     res.render('about');
 });
 
-app.get('/admission', (req, res, next) => {
-    res.render('admission');
-});
-
 app.get('/contact', (req, res, next) => {
     res.render('contact');
 });

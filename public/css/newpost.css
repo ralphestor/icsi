@@ -27,6 +27,12 @@ form div label {
   font-size: 1rem;
 }
 
+form div #numAuthorsInput {
+  min-width: 0;
+  width: 50px;
+  text-align: center;
+}
+
 form div #firstLbl, form div #secondLbl {
   display: inline;
 }
@@ -113,43 +119,6 @@ form .postBtn {
 
 form .postBtn:hover {
   background-color: #003097;
-  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
-          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
-}
-
-form .authorBtn {
-  padding: 8px;
-  border-radius: 50%;
-  outline: none;
-  font-family: 'Poppins', serif;
-  font-size: 1rem;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
-  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  margin: 0 10px;
-}
-
-form .minusAuthor {
-  background-color: #ff0d0d;
-}
-
-form .minusAuthor:hover {
-  background-color: #a70707;
-  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
-          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
-}
-
-form .addAuthor {
-  background-color: #0856ff;
-}
-
-form .addAuthor:hover {
-  background-color: #0135a5;
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
           box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
 }

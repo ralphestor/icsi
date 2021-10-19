@@ -12,4 +12,18 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+main div {
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+main div h3 {
+  font-family: 'Poppins', serif;
+  font-size: 1rem;
+}
+
+main div h3 span {
+  font-weight: 400;
+}
 /*# sourceMappingURL=contact.css.map */
