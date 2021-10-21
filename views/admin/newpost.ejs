@@ -14,10 +14,33 @@
             
             <label id="firstLbl" for="authorInput">Authors &</label>
             <label id="secondLbl" for="positionInput">Position of Authors</label>
-            <input type="number" min="1" max="5" id="numAuthorsInput">
+            <input type="number" min="1" max="5" id="numAuthorsInput" value="1">
             <div class="authorContainer">
-                <input class="authorInput" type="text" placeholder="Author">
-                <input class="positionInput" type="text" placeholder="Position">
+                <div>
+                    <label class="authorNum">Author 1</label>
+                    <input class="authorInput" type="text" placeholder="Author Name">
+                    <input class="positionInput" type="text" placeholder="Position">
+                </div>
+                <div>
+                    <label class="authorNum">Author 2</label>
+                    <input class="authorInput" type="text" placeholder="Author Name">
+                    <input class="positionInput" type="text" placeholder="Position">
+                </div>
+                <div>
+                    <label class="authorNum">Author 3</label>
+                    <input class="authorInput" type="text" placeholder="Author Name">
+                    <input class="positionInput" type="text" placeholder="Position">
+                </div>
+                <div>
+                    <label class="authorNum">Author 4</label>
+                    <input class="authorInput" type="text" placeholder="Author Name">
+                    <input class="positionInput" type="text" placeholder="Position">
+                </div>
+                <div>
+                    <label class="authorNum">Author 5</label>
+                    <input class="authorInput" type="text" placeholder="Author Name">
+                    <input class="positionInput" type="text" placeholder="Position">
+                </div>
             </div>
         </div>
 
@@ -38,6 +61,10 @@
     </form>
 </main>
 
-<script src="./js/newpost.js"></script>
+
 <%- include('../partials/footer') %>
+<%- include('../partials/jsLinks') %>
+<!-- JAVASCRIPT LINKS -->
+<script src="./js/newpost.js"></script>
+
 <%- include('../partials/htmlBottom') %>

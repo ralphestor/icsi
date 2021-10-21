@@ -15,6 +15,7 @@
 
 form {
   text-align: center;
+  width: 100%;
 }
 
 form div {
@@ -41,13 +42,30 @@ form div .authorContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+form div .authorContainer div .authorInput, form div .authorContainer div .positionInput {
+  min-width: 0;
+  width: 45%;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  form div .authorContainer div .authorInput, form div .authorContainer div .positionInput {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    margin: 10px auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -70,23 +88,6 @@ form div input {
   form div input {
     min-width: 0;
     width: 80%;
-  }
-}
-
-form div .authorInput, form div .positionInput {
-  min-width: 0;
-  width: 40%;
-  margin: 10px;
-}
-
-@media (max-width: 768px) {
-  form div .authorInput, form div .positionInput {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 80%;
-    margin: 10px auto;
   }
 }
 

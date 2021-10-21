@@ -16,6 +16,8 @@
 
 form {
     text-align: center;
+    width: 100%;
+
     div {
         margin-bottom: 10px;
 
@@ -37,8 +39,24 @@ form {
 
         .authorContainer {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
+
+            div {
+
+                .authorInput, .positionInput {
+                    min-width: 0;
+                    width: 45%;
+                    margin: 10px;
+        
+                    @include tablets {
+                        flex-direction: column;
+                        width: 80%;
+                        margin: 10px auto;
+                    }
+                }
+            }
+
 
             @include tablets {
                 flex-direction: column;
@@ -59,17 +77,7 @@ form {
 
         }
 
-        .authorInput, .positionInput {
-            min-width: 0;
-            width: 40%;
-            margin: 10px;
 
-            @include tablets {
-                flex-direction: column;
-                width: 80%;
-                margin: 10px auto;
-            }
-        }
 
 
         textarea {
