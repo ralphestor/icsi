@@ -1,15 +1,19 @@
 const express = require('express');
 const ejs = require('ejs-mate');
 const path = require('path');
-const mongoose = require('mongoose');
-
+const mongoConnect = require('./db/mongoose');
 const app = express();
+
+mongoConnect.main();
 
 app.engine('ejs', ejs);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+
 
 app.get('/', (req, res, next) => {
     res.render('home');
