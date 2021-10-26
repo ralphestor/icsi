@@ -50,7 +50,6 @@ form {
                     margin: 10px;
         
                     @include tablets {
-                        flex-direction: column;
                         width: 80%;
                         margin: 10px auto;
                     }

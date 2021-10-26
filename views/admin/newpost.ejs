@@ -9,8 +9,8 @@
 </header>
 
 <main>
-    <form action="" method="post">
-        <div>
+    <form action="/post-article" method="post">
+        <!-- <div>
             
             <label id="firstLbl" for="authorInput">Authors &</label>
             <label id="secondLbl" for="positionInput">Position of Authors</label>
@@ -46,18 +46,34 @@
 
         <div>
             <label for="titleInput">Title</label>
-            <input id="titleInput" type="text" placeholder="Title">
+            <input id="titleInput" name="titleInput" type="text" placeholder="Title">
         </div>
         <div>
             <label for="imgInput">Image</label>
-            <input id="imgInput" type="file">
+            <input id="imgInput" name="imgInput" type="file">
         </div>
         <div>
             <label for="parInput">Content</label>
-            <textarea id="parInput" placeholder="Content"></textarea>
+            <textarea id="parInput" name="parInput" placeholder="Content"></textarea>
+        </div> -->
+        <div class="form-group">
+            <label for="author">Author: </label>
+            <input type="text" name="author" id="author">
+        </div>
+        <div class="form-group">
+            <label for="title">Title: </label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div class="form-group">
+            <label for="content">Content: </label>
+            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="date">Date: </label>
+            <input type="date" name="date" id="date">
         </div>
 
-        <button class="postBtn" type="submit">Post Article</button>
+        <input class="postBtn" type="submit" value="Post Article">
     </form>
 </main>
 

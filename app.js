@@ -4,6 +4,8 @@ const path = require('path');
 const mongoConnect = require('./db/mongoose');
 const app = express();
 
+const Articles = require('./models/articles');
+
 mongoConnect.main();
 
 app.engine('ejs', ejs);
@@ -12,6 +14,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.urlencoded({ extended: true }));
+ 
+app.use(express.json());
 
 
 
@@ -41,6 +46,18 @@ app.get('/login', (req, res, next) => {
 
 app.get('/signup', (req, res, next) => {
     res.render('./signup');
+});
+
+app.post('/post-article', async (req,res) => {
+    const Data = new Articles({
+        author: req.body.author,
+        title: req.body.title,
+        content: req.body.content,
+        date: req.body.date
+    })
+
+    await Data.save();
+    res.redirect('/articles');
 });
 
 
