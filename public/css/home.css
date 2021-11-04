@@ -168,7 +168,7 @@ section #cardContainer {
 
 section #cardContainer .homeCards {
   width: 400px;
-  background-color: #d4d18c;
+  background-color: #86df86;
   text-align: center;
   padding: 20px;
   margin: 0 20px;
@@ -221,7 +221,60 @@ section #articlesBtn:hover {
 }
 
 #articlesHome {
-  text-align: center;
   margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#articlesHome .articlesContainer {
+  width: 850px;
+}
+
+#articlesHome .articlesContainer .article {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 640px 140px;
+      grid-template-columns: 640px 140px;
+  gap: 20px;
+  background-color: #b9dcec;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#articlesHome .articlesContainer .article .col1 .title {
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+#articlesHome .articlesContainer .article .col1 .date {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#articlesHome .articlesContainer .article .col1 .content {
+  font-size: 0.8rem;
+  font-family: 'Poppins', serif;
+  width: 100%;
+}
+
+#articlesHome .articlesContainer .article .col2 .image {
+  width: 140px;
+  height: 100%;
 }
 /*# sourceMappingURL=home.css.map */

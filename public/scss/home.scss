@@ -132,7 +132,7 @@ section {
 
         .homeCards{
             width: 400px;
-            background-color: #d4d18c;
+            background-color: #86df86;
             // border: 2px solid red;
             text-align: center;
             padding: 20px;
@@ -183,8 +183,55 @@ section {
 }
 
 #articlesHome {
-    text-align: center;
     margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .articlesContainer {
+        width: 850px;
+
+        .article {
+            width: 100%;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 640px 140px;
+            gap: 20px;
+            background-color: #b9dcec;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+            .col1 {
+
+                .title { 
+                    font-size: 1.25rem;
+                    width: 100%;
+                }
+    
+                .date {
+                    font-size: 0.8rem;
+                    font-weight: 300;
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+    
+                .content {
+                    font-size: 0.8rem;
+                    font-family: 'Poppins', serif;
+                    width: 100%;
+                }
+            }
+
+
+            .col2 {
+                .image {
+                    width: 140px;
+                    height: 100%;
+                }
+            }
+        }
+    }
 }
 
 

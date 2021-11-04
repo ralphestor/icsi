@@ -11,9 +11,22 @@
 <main>
     <button class="composeBtn" onclick=" location.href = '/new_article' ">Compose New Article</button>
     <div class="articlesContainer">
-        <div>Article1</div>
-        <div>Article2</div>
-        <div>Article3</div>
+
+        <% articles.forEach( article => { %>
+            <div class="article">
+                <div class="col1">
+                    <h1 class="title"><%= article.title %></h1>
+                    <h5 class="date"><%= article.date %></h5>
+                    <p class="content"><%= article.content.slice(0, 200) %><span>... <a href="#">Read More >>></a></span></p>
+                </div>
+                <div class="col2">
+                    <img class="image" src="" alt="">
+                </div>
+            </div>
+
+        <% }) %>
+
+        
     </div>
 </main>
 

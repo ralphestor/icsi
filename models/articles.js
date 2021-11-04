@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const articlesSchema = new mongoose.Schema({
+    id: {
+        type: String,
+        required: true
+    },
     author: {
         type: String,
         required: true

@@ -3,6 +3,7 @@ const ejs = require('ejs-mate');
 const path = require('path');
 const mongoConnect = require('./db/mongoose');
 const app = express();
+const { v4: uuidv4 } = require('uuid');
 
 const Articles = require('./models/articles');
 
@@ -32,8 +33,14 @@ app.get('/contact', (req, res, next) => {
     res.render('contact');
 });
 
-app.get('/articles', (req, res, next) => {
-    res.render('articles');
+app.get('/articles', async (req, res, next) => {
+    try {
+        const articles = await Articles.find();
+        res.render('articles', { articles });
+    } catch(e) {
+        console.log(e);
+    }
+
 });
 
 app.get('/new_article', (req, res, next) => {
@@ -49,11 +56,19 @@ app.get('/signup', (req, res, next) => {
 });
 
 app.post('/post-article', async (req,res) => {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    var dateFinal = mm + '/' + dd + '/' + yyyy;
+
+
     const Data = new Articles({
+        id: uuidv4(),
         author: req.body.author,
         title: req.body.title,
         content: req.body.content,
-        date: req.body.date
+        date: dateFinal
     })
 
     await Data.save();
