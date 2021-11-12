@@ -35,7 +35,7 @@ app.get('/contact', (req, res, next) => {
 
 app.get('/articles', async (req, res, next) => {
     try {
-        const articles = await Articles.find();
+        const articles = (await Articles.find()).reverse();
         res.render('articles', { articles });
     } catch(e) {
         console.log(e);
@@ -55,6 +55,18 @@ app.get('/signup', (req, res, next) => {
     res.render('./signup');
 });
 
+app.get('/articles/:id', async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const article = await Articles.findById({ 
+            _id: id
+         });
+        res.render('article', { article } );
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 app.post('/post-article', async (req,res) => {
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -64,8 +76,9 @@ app.post('/post-article', async (req,res) => {
 
 
     const Data = new Articles({
-        id: uuidv4(),
+        _id: uuidv4(),
         author: req.body.author,
+        imgUrl: req.body.imgUrl,
         title: req.body.title,
         content: req.body.content,
         date: dateFinal

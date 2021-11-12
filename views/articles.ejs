@@ -16,11 +16,11 @@
             <div class="article">
                 <div class="col1">
                     <h1 class="title"><%= article.title %></h1>
-                    <h5 class="date"><%= article.date %></h5>
-                    <p class="content"><%= article.content.slice(0, 200) %><span>... <a href="#">Read More >>></a></span></p>
+                    <h5 class="author">by: <%= article.author %><span class="date"><%= article.date %></span></h5>
+                    <p class="content"><%= article.content.slice(0, 200) %><span>... <a href="/articles/<%= article.id %>">Read More >>></a></span></p>
                 </div>
                 <div class="col2">
-                    <img class="image" src="" alt="">
+                    <img class="image" src="<%= article.imgUrl %>" alt="">
                 </div>
             </div>
 

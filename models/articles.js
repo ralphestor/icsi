@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const articlesSchema = new mongoose.Schema({
-    id: {
+const articlesSchema = new Schema({
+    _id: {
         type: String,
         required: true
     },
@@ -13,12 +14,15 @@ const articlesSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    imgUrl: {
+        type: String,
+    },
     content: {
         type: String,
         required: true
     },
     date: {
-        type: Date,
+        type: String,
         required: true
     }
     

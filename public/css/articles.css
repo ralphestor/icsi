@@ -75,11 +75,17 @@ main .articlesContainer .article .col1 .title {
   width: 100%;
 }
 
-main .articlesContainer .article .col1 .date {
+main .articlesContainer .article .col1 .author {
   font-size: 0.8rem;
   font-weight: 300;
   margin-bottom: 10px;
   width: 100%;
+}
+
+main .articlesContainer .article .col1 .author .date {
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding-left: 10px;
 }
 
 main .articlesContainer .article .col1 .content {
