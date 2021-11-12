@@ -4,9 +4,13 @@
 <link rel="stylesheet" href="./css/contact.css">
 <%- include('./partials/navbar') %>
 <header>
-    <img id="headerImg" src="./images/contact.jpg" alt="Contact">
+    <img id="headerImg" src="./images/home2.jpg" alt="Contact">
     <h1 class="mainTitle">Login</h1>
 </header>
+<% if (messages.error) {%>
+    <% messages.error %>
+<% } %>
+
 <form action="" method="post">
     <div>
         <label for="emailInput">Email</label>
