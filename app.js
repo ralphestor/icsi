@@ -11,16 +11,13 @@ const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 const flash = require('express-flash');
-const session = require('express-session')
+const session = require('express-session');
+const methodOverride = require('method-override');
 
-const initializePassport = require('./passport-config.js');
-initializePassport(
-    passport,
-    email => users.find(user => user.email === email)
-);
 
 const Articles = require('./models/articles');
-const Admin = require('./models/admin')
+const Admin = require('./models/admin');
+const { passportSerialize, passportDeserialize, passportMiddleware } = require('./passport-config.js');
 
 mongoConnect.main();
 
@@ -34,33 +31,46 @@ app.use(express.urlencoded({ extended: true }));
  
 app.use(express.json());
 
+app.use(methodOverride('_method'));
+
 app.use(flash());
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 
+passportSerialize;
+passportDeserialize;
+passportMiddleware;
 
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) return next();
+    res.redirect('/login');
+}
+function isLoggedOut(req, res, next) {
+    if (!req.isAuthenticated()) return next();
+    res.redirect('/new_article');
+}
 
 app.get('/', (req, res, next) => {
-    res.render('home');
+    res.render('home', {title: 'Home'});
 });
 
 app.get('/about', (req, res, next) => {
-    res.render('about');
+    res.render('about', {title: 'About'});
 });
 
 app.get('/contact', (req, res, next) => {
-    res.render('contact');
+    res.render('contact', {title: 'Contact'});
 });
 
 app.get('/articles', async (req, res, next) => {
     try {
         const articles = (await Articles.find()).reverse();
-        res.render('articles', { articles });
+        res.render('articles', { title: 'Articles', articles });
     } catch(e) {
         console.log(e);
     }
@@ -68,24 +78,59 @@ app.get('/articles', async (req, res, next) => {
 });
 
 app.get('/new_article', (req, res, next) => {
-    res.render('./admin/newpost');
+    res.render('./admin/newpost', {title: 'New Article'});
 });
 
-app.get('/login', (req, res, next) => {
-    res.render('./login');
+app.get('/login', isLoggedOut, (req, res, next) => {
+    const response = {
+        title: 'Login',
+        error: req.query.error
+    }
+
+    res.render('./login', { title: 'Log In', response });
 });
 
 app.get('/signup', (req, res, next) => {
-    res.render('./signup');
+    res.render('./signup', {title: 'Sign Up'});
 });
+
+// app.get('/setup', async (req, res, next) {
+//     const exists = await Admin.exists({ email: 'admin@gmail.com'});
+
+//     if(exists) {
+//         console.log("EXISTS");
+//         res.redirect('/login');
+//         return;
+//     }
+
+//     bcrypt.genSalt(10, function(err, salt) {
+//         if(err) return next(err);
+//         bcrypt.hash('pass', salt, function(err, hash){
+//             if(err) return next(err);
+
+//             const newAdmin = new Admin({
+//                 _id: uuidv4(),
+//                 email: 'admin@gmail.com',
+//                 password: hash
+//             });
+            
+//             newAdmin.save();
+//             res.redirect('/login');
+//         })
+//     });
+// });
+
+app.get('/logout', async (req, res, next) => {
+    await req.logout();
+    res.redirect('/');
+})
 
 app.get('/articles/:id', async (req, res, next) => {
     try {
+        
         const { id } = req.params;
-        const article = await Articles.findById({ 
-            _id: id
-         });
-        res.render('article', { article } );
+        const article = await Articles.findById(id);
+        res.render('article', { title: 'Article', article } );
     } catch (e) {
         console.log(e);
     }
@@ -94,20 +139,37 @@ app.get('/articles/:id', async (req, res, next) => {
 app.post('/login',
     passport.authenticate('local', {
         successRedirect: '/',
-        failureRedirect: '/login',
+        failureRedirect: '/login?error=true',
         failureFlash: true
 }));
 
 app.post('/signup', async(res, req, next) => {
     try {
-        const User = new Admin({
-            _id: uuidv4(),
-            email: req.body.email,
-            password: req.body.password
-        })
+        bcrypt.genSalt(10, function(err, salt) {
+            if(err) return next(err);
+            bcrypt.hash(req.body.password, salt, function(err, hash){
+                if(err) return next(err);
     
-        await User.save();
-        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+                const newAdmin = new Admin({
+                    _id: uuidv4(),
+                    email: req.body.email,
+                    password: hash
+                });
+                
+                newAdmin.save();
+                res.redirect('/login');
+            })
+        });
+        console.log(req.body)
+        // const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        // const User = new Admin({
+        //     _id: uuidv4(),
+        //     email: req.body.email,
+        //     password: hashedPassword
+        // })
+    
+        // await User.save();
+        
         
     } catch(e) {
         console.log(e);
@@ -121,7 +183,7 @@ app.post('/post-article', async (req,res) => {
     var yyyy = today.getFullYear();
     var dateFinal = mm + '/' + dd + '/' + yyyy;
 
-
+    console.log(req.body);
     const Data = new Articles({
         _id: uuidv4(),
         author: req.body.author,
