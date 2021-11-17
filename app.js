@@ -55,8 +55,13 @@ function isLoggedOut(req, res, next) {
     res.redirect('/new_article');
 }
 
-app.get('/', (req, res, next) => {
-    res.render('home', {title: 'Home'});
+app.get('/', async (req, res, next) => {
+    try {
+        const articles = (await Articles.find()).reverse();
+        res.render('home', {title: 'Home', articles});
+    } catch(e) {
+        console.log(e);
+    }
 });
 
 app.get('/about', (req, res, next) => {
@@ -145,30 +150,30 @@ app.post('/login',
 
 app.post('/signup', async(res, req, next) => {
     try {
-        bcrypt.genSalt(10, function(err, salt) {
-            if(err) return next(err);
-            bcrypt.hash(req.body.password, salt, function(err, hash){
-                if(err) return next(err);
+        // bcrypt.genSalt(10, function(err, salt) {
+        //     if(err) return next(err);
+        //     bcrypt.hash(req.body.password, salt, function(err, hash){
+        //         if(err) return next(err);
     
-                const newAdmin = new Admin({
-                    _id: uuidv4(),
-                    email: req.body.email,
-                    password: hash
-                });
+        //         const newAdmin = new Admin({
+        //             _id: uuidv4(),
+        //             email: req.body.email,
+        //             password: hash
+        //         });
                 
-                newAdmin.save();
-                res.redirect('/login');
-            })
-        });
+        //         newAdmin.save();
+        //         res.redirect('/login');
+        //     })
+        // });
         console.log(req.body)
-        // const hashedPassword = await bcrypt.hash(req.body.password, 10);
-        // const User = new Admin({
-        //     _id: uuidv4(),
-        //     email: req.body.email,
-        //     password: hashedPassword
-        // })
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        const User = new Admin({
+            _id: uuidv4(),
+            email: req.body.email,
+            password: hashedPassword
+        })
     
-        // await User.save();
+        await User.save();
         
         
     } catch(e) {

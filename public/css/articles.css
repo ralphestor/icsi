@@ -70,6 +70,46 @@ main .articlesContainer .article {
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+main .articlesContainer .article .col1 .adminBtnContainer {
+  margin: 10px 0;
+}
+
+main .articlesContainer .article .col1 .adminBtnContainer .adminBtns {
+  width: 70px;
+  height: 20px;
+  outline: none;
+  font-family: 'Poppins', serif;
+  font-size: 0.8rem;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+main .articlesContainer .article .col1 .adminBtnContainer .updateBtn {
+  background-color: #0856ff;
+}
+
+main .articlesContainer .article .col1 .adminBtnContainer .updateBtn:hover {
+  background-color: #003097;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+main .articlesContainer .article .col1 .adminBtnContainer .deleteBtn {
+  background-color: #a30500;
+}
+
+main .articlesContainer .article .col1 .adminBtnContainer .deleteBtn:hover {
+  background-color: #700400;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+}
+
 main .articlesContainer .article .col1 .title {
   font-size: 1.25rem;
   width: 100%;
@@ -98,5 +138,7 @@ main .articlesContainer .article .col2 .image {
   width: 100%;
   min-height: 100px;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=articles.css.map */

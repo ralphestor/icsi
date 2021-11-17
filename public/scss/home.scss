@@ -181,16 +181,9 @@ section {
         }
     }
 }
-
-#articlesHome {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    .articlesContainer {
+.articlesContainer {
         width: 850px;
+        margin-bottom: 20px;
 
         .article {
             width: 100%;
@@ -208,13 +201,19 @@ section {
                     font-size: 1.25rem;
                     width: 100%;
                 }
-    
-                .date {
+                .author {
                     font-size: 0.8rem;
                     font-weight: 300;
                     margin-bottom: 10px;
                     width: 100%;
+
+                    .date {
+                        font-size: 0.8rem;
+                        font-weight: 300;
+                        padding-left: 10px;
+                    }
                 }
+
     
                 .content {
                     font-size: 0.8rem;
@@ -226,7 +225,66 @@ section {
 
             .col2 {
                 .image {
-                    width: 140px;
+                    width: 100%;
+                    min-height: 100px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+#articlesHome {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .articlesContainer {
+        width: 850px;
+        margin-bottom: 20px;
+
+        .article {
+            width: 100%;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 640px 140px;
+            gap: 20px;
+            background-color: #b9dcec;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+            .col1 {
+
+                .title { 
+                    font-size: 1.25rem;
+                    width: 100%;
+                }
+                .author {
+                    font-size: 0.8rem;
+                    font-weight: 300;
+                    margin-bottom: 10px;
+                    width: 100%;
+
+                    .date {
+                        font-size: 0.8rem;
+                        font-weight: 300;
+                        padding-left: 10px;
+                    }
+                }
+
+    
+                .content {
+                    font-size: 0.8rem;
+                    font-family: 'Poppins', serif;
+                    width: 100%;
+                }
+            }
+
+
+            .col2 {
+                .image {
+                    width: 100%;
+                    min-height: 100px;
                     height: 100%;
                 }
             }

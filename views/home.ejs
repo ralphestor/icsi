@@ -32,17 +32,19 @@
     <div class="articlesContainer">
 
 
-        <div class="article">
-            <div class="col1">
-                <h1 class="title">Title</h1>
-                <h5 class="date">Date</h5>
-                <p class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat perspiciatis reprehenderit aspernatur ullam alias obcaecati explicabo accusamus illum eaque natus.<span>... <a href="#">Read More >>></a></span></p>
-    
+        <% for(i = 0; i < 3; i++) { %>
+            <div class="article">
+                <div class="col1">
+                    <h1 class="title"><%= articles[i].title %></h1>
+                    <h5 class="author">by: <%= articles[i].author %><span class="date"><%= articles[i].date %></span></h5>
+                    <p class="content"><%= articles[i].content.slice(0, 200) %><span>... <a href="/articles/<%= articles[i].id %>">Read More >>></a></span></p>
+                </div>
+                <div class="col2">
+                    <img class="image" src="<%= articles[i].imgUrl %>" alt="">
+                </div>
             </div>
-            <div class="col2">
-                <img class="image" src="" alt="">
-            </div>
-        </div>
+
+        <% } %>
         
         
     </div>

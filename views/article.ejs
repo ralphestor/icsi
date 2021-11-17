@@ -1,25 +1,33 @@
-<%- include('./partials/htmlTop') %>
-<link rel="stylesheet" href="./css/navbar.css">
-<link rel="stylesheet" href="./css/footer.css">
-<link rel="stylesheet" href="./css/contact.css">
-<%- include('./partials/navbar') %>
-<header>
-    <img id="headerImg" src="./images/contact.jpg" alt="Contact">
-    <h1 class="mainTitle"><%= article.title %></h1>
-</header>
-<main>
-    <div>
-        <h3>Address: <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, praesentium.</span></h3>
-        <h3>Landline #: <span>(02) 7 999 9999</span></h3>
-        <h3>Phone # (Smart): <span>(+63) 9999999999</span></h3>
-        <h3>Phone # (Globe): <span>(+63) 8888888888</span></h3>
-        <h3>Email: <span>support@icsi.com.ph</span></h3>
-    </div>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= article.title %></title>
 
-<%- include('./partials/footer') %>
-<%- include('./partials/jsLinks') %>
+    <link rel="icon" href="./images/icsilogo.png">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <%- include('./partials/navbar') %>
+    <header>
+        <img id="headerImg" src="./images/contact.jpg" alt="Contact">
+        <h1 class="mainTitle"><%= article.title %></h1>
+    </header>
+    <main>
+        <div>
+            <h3>Address: <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, praesentium.</span></h3>
+            <h3>Landline #: <span>(02) 7 999 9999</span></h3>
+            <h3>Phone # (Smart): <span>(+63) 9999999999</span></h3>
+            <h3>Phone # (Globe): <span>(+63) 8888888888</span></h3>
+            <h3>Email: <span>support@icsi.com.ph</span></h3>
+        </div>
+    </main>
+
+    <%- include('./partials/footer') %>
+    <%- include('./partials/jsLinks') %>
 <!-- JAVASCRIPT LINKS -->
 
 
-<%- include('./partials/htmlBottom') %>
+    <%- include('./partials/htmlBottom') %>
