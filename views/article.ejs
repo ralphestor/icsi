@@ -6,28 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= article.title %></title>
 
-    <link rel="icon" href="./images/icsilogo.png">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/contact.css">
-    <%- include('./partials/navbar') %>
-    <header>
-        <img id="headerImg" src="./images/contact.jpg" alt="Contact">
-        <h1 class="mainTitle"><%= article.title %></h1>
-    </header>
-    <main>
-        <div>
-            <h3>Address: <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, praesentium.</span></h3>
-            <h3>Landline #: <span>(02) 7 999 9999</span></h3>
-            <h3>Phone # (Smart): <span>(+63) 9999999999</span></h3>
-            <h3>Phone # (Globe): <span>(+63) 8888888888</span></h3>
-            <h3>Email: <span>support@icsi.com.ph</span></h3>
+    <link rel="icon" href="/images/icsilogo.png">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/article.css">
+
+<%- include('./partials/navbar') %>
+    <article class="articleContainer">
+        <header>
+            <img class="articleImg" src=" <%= article.imgUrl %> " alt="Article Image">
+        </header>
+        <main>
+            <div>
+                <h1 class="mainTitle"><%= article.title %></h1>
+                <h4 class="author">By: <%= article.author %></h4>
+                <h4 class="date"><%= article.date %></h4>
+                <p><%= article.content %></p>
+            </div>
+        </main>
+    </article>
+    <% if(isAuth) {%>
+        <div class="btnGroup">
+            <form method="GET" action="/edit/<%= article.id %>">
+                <button class="adminBtns updateBtn">Update</button>
+            </form>
+            <form method="POST" action="/articles/<%= article._id %>?_method=DELETE">
+                <button href="#" class="adminBtns deleteBtn">Delete</button>
+            </form>
         </div>
-    </main>
+    <% } %>
+
+    <button id="articlesBtn" onclick=" location.href = '/articles' ">Back to All Articles</button>
+
+
 
     <%- include('./partials/footer') %>
     <%- include('./partials/jsLinks') %>
 <!-- JAVASCRIPT LINKS -->
-
 
     <%- include('./partials/htmlBottom') %>

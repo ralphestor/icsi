@@ -1,13 +1,13 @@
 <%- include('./partials/htmlTop') %>
-<link rel="stylesheet" href="./css/navbar.css">
-<link rel="stylesheet" href="./css/footer.css">
-<link rel="stylesheet" href="./css/home.css">
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/home.css">
 <%- include('./partials/navbar') %>
 <main>
     <div>
         <h4>Ready to Provide the Best Online Education</h4>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur voluptas sapiente qui eligendi fuga. Tempora aliquid nihil deserunt? Dicta, dolorum.</p>
-        <button>Enroll Now</button>
+        <button onclick=" location.href = '/contact' ">Contact Us</button>
     </div>
 </main>
 
@@ -15,12 +15,12 @@
     <h4>Departments</h4>
     <div id="cardContainer">
         <div id="jhsCard" class="homeCards">
-            <img src="./images/jhs.jpg" alt="Junior High School">
+            <img src="/images/jhs.jpg" alt="Junior High School">
             <h5>Junior High School</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum provident saepe exercitationem, necessitatibus quas itaque eligendi cumque dolor porro facere.</p>
         </div>
         <div id="shsCard" class="homeCards">
-            <img src="./images/shs.jpg" alt="Junior High School">
+            <img src="/images/shs.jpg" alt="Junior High School">
             <h5>Senior High School</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum provident saepe exercitationem, necessitatibus quas itaque eligendi cumque dolor porro facere.</p>
         </div>
@@ -35,15 +35,16 @@
         <% for(i = 0; i < 3; i++) { %>
             <div class="article">
                 <div class="col1">
-                    <h1 class="title"><%= articles[i].title %></h1>
-                    <h5 class="author">by: <%= articles[i].author %><span class="date"><%= articles[i].date %></span></h5>
-                    <p class="content"><%= articles[i].content.slice(0, 200) %><span>... <a href="/articles/<%= articles[i].id %>">Read More >>></a></span></p>
+                    <h1 class="title"><a href="/articles/<%= articles[i].id %>"> <%= articles[i].title %> </a></h1>
+                    <h5 class="author">by: <%= articles[i].author %>
+                        <span class="date"><%= articles[i].date %></span>
+                    </h5>
+                    <p class="content"><%= articles[i].content.slice(0, 400) %><span>... <a href="/articles/<%= articles[i].id %>">Read More >>></a></span></p>
                 </div>
                 <div class="col2">
                     <img class="image" src="<%= articles[i].imgUrl %>" alt="">
                 </div>
             </div>
-
         <% } %>
         
         

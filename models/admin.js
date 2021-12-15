@@ -1,14 +1,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const passportLocalMongoose = require('passport-local-mongoose');
 
-const adminSchema = new Schema({
+const AdminSchema = new Schema({
     _id: {
         type: String,
         required: true
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
@@ -16,4 +18,6 @@ const adminSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Admin', adminSchema);
+AdminSchema.plugin(passportLocalMongoose);
+
+module.exports = mongoose.model('Admin', AdminSchema);

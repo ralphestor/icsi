@@ -35,8 +35,5 @@ $(document).ready(() => {
             nav.toggleClass('scrolled', $(this).scrollTop() > nav.height());
         });
     });
-
-
-
 });
 

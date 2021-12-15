@@ -1,0 +1,116 @@
+@import './variables';
+
+.mainTitle {
+    text-align: center;
+    padding: 40px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+
+#headerImg {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    object-fit: cover;
+}
+
+form {
+    text-align: center;
+    width: 100%;
+
+    div {
+        margin-bottom: 10px;
+
+        label {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+
+        #numAuthorsInput {
+            min-width: 0;
+            width: 50px;
+            text-align: center;
+        }
+
+        #firstLbl, #secondLbl {
+            display: inline;
+        }
+
+        .authorContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            div {
+
+                .authorInput, .positionInput {
+                    min-width: 0;
+                    width: 45%;
+                    margin: 10px;
+        
+                    @include tablets {
+                        width: 80%;
+                        margin: 10px auto;
+                    }
+                }
+            }
+
+
+            @include tablets {
+                flex-direction: column;
+            }
+        }
+        
+
+        input {
+            min-width: 500px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            margin: 5px 0;
+
+            @include tablets {
+                min-width: 0;
+                width: 80%;
+            }
+
+        }
+
+
+
+
+        textarea {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            width: 80%;
+            min-height: 250px;
+            height: auto;
+            resize: none;
+        }
+
+
+    }
+
+    .postBtn {
+        width: 120px;
+        height: 40px;
+        outline: none;
+        font-family: 'Poppins', serif;
+        font-size: 1rem;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        background-color: rgb(8, 86, 255);
+        transition: 300ms ease-in-out;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        margin: 20px auto;
+
+        &:hover {
+            background-color: rgb(0, 48, 151);
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+        }
+    }
+
+
+}

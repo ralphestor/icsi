@@ -1,27 +1,36 @@
 <%- include('./partials/htmlTop') %>
-<link rel="stylesheet" href="./css/navbar.css">
-<link rel="stylesheet" href="./css/footer.css">
-<link rel="stylesheet" href="./css/articles.css">
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/articles.css">
 <%- include('./partials/navbar') %>
 <header>
-    <img id="headerImg" src="./images/articles.jpg" alt="Articles">
+    <img id="headerImg" src="/images/articles.jpg" alt="Articles">
     <h1 class="mainTitle">Articles</h1>
 </header>
 
 <main>
+    <% if(isAuth) {%>
     <button class="composeBtn" onclick=" location.href = '/new_article' ">Compose New Article</button>
+    <% } %>
+
     <div class="articlesContainer">
 
         <% articles.forEach( article => { %>
             <div class="article">
                 <div class="col1">
-                    <h1 class="title"><%= article.title %></h1>
+                    <h1 class="title"><a href="/articles/<%= article.id %>"> <%= article.title %> </a></h1>
                     <h5 class="author">by: <%= article.author %>
                         <span class="date"><%= article.date %></span>
                     </h5>
                     <div class="adminBtnContainer">
-                        <button href="#" class="adminBtns updateBtn">Update</button>
-                        <button href="#" class="adminBtns deleteBtn">Delete</button>
+                        <% if(isAuth) {%>
+                        <form method="GET" action="/edit/<%= article.id %>">
+                            <button class="adminBtns updateBtn">Update</button>
+                        </form>
+                        <form method="POST" action="/articles/<%= article._id %>?_method=DELETE">
+                            <button href="#" class="adminBtns deleteBtn">Delete</button>
+                        </form>
+                        <% } %>
                     </div>
                     <p class="content"><%= article.content.slice(0, 400) %><span>... <a href="/articles/<%= article.id %>">Read More >>></a></span></p>
                 </div>

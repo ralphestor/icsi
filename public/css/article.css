@@ -1,1 +1,107 @@
-/* No CSS *//*# sourceMappingURL=article.css.map */
+nav {
+  background-color: #0a090f !important;
+}
+
+.articleContainer {
+  width: 800px;
+  margin: 20px auto;
+  margin-top: 100px;
+}
+
+.articleContainer header {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 70%;
+}
+
+.articleContainer header .articleImg {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.articleContainer main div p {
+  margin-top: 20px;
+  font-family: 'Poppins', serif;
+  line-height: 30px;
+}
+
+.articleContainer main div .author {
+  display: inline;
+}
+
+.articleContainer main div .date {
+  display: inline;
+  margin-left: 10px;
+}
+
+#articlesBtn {
+  width: 200px;
+  height: 40px;
+  outline: none;
+  font-family: 'Poppins', serif;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  background-color: #0856ff;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  margin: 40px auto;
+}
+
+#articlesBtn:hover {
+  background-color: #003097;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+.btnGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.adminBtns {
+  width: 70px;
+  height: 20px;
+  outline: none;
+  font-family: 'Poppins', serif;
+  font-size: 0.8rem;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.updateBtn {
+  background-color: #0856ff;
+}
+
+.updateBtn:hover {
+  background-color: #003097;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+.deleteBtn {
+  background-color: #a30500;
+}
+
+.deleteBtn:hover {
+  background-color: #700400;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+}
+/*# sourceMappingURL=article.css.map */

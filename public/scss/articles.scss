@@ -1,3 +1,5 @@
+@import './variables';
+
 .mainTitle {
     text-align: center;
     padding-top: 40px;
@@ -40,22 +42,43 @@ main {
     }
 
     .articlesContainer {
-        width: 850px;
+        width: 900px;
         margin-bottom: 20px;
+
+        @include laptops {
+            width: 650px;
+        }
+
+        @include tablets {
+            width: 80%;
+        }
+
+        @include tablets {
+            width: 90%;
+        }
+
 
         .article {
             width: 100%;
             padding: 10px 20px;
             margin-bottom: 20px;
             display: grid;
-            grid-template-columns: 640px 140px;
-            gap: 20px;
+            grid-template-columns: 70% 30%;
             background-color: #b9dcec;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+            @include tablets {
+                grid-template-columns: 100%;
+                gap: 10px;
+            }
 
             .col1 {
                 .adminBtnContainer {
                     margin: 10px 0;
+
+                    form {
+                        display: inline;
+                    }
 
                     .adminBtns {
                         width: 70px;
@@ -65,7 +88,7 @@ main {
                         font-size: 0.8rem;
                         color: white;
                         border: none;
-                        border-radius: 25px;
+                        border-radius: 2px;
                         transition: 300ms ease-in-out;
                         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
                         cursor: pointer;
@@ -90,7 +113,19 @@ main {
                 }
                 .title { 
                     font-size: 1.25rem;
-                    width: 100%;
+                    width: 100%; 
+
+                    a {
+                        text-decoration: none;
+                        color: #000000;
+                        transition: color 0.3s ease-in-out;
+                        
+                        &:hover {
+                            color: rgb(0, 48, 151);
+                        }
+                    }
+
+
                 }
                 .author {
                     font-size: 0.8rem;
@@ -109,12 +144,13 @@ main {
                 .content {
                     font-size: 0.8rem;
                     font-family: 'Poppins', serif;
-                    width: 100%;
+                    width: 96%;
                 }
             }
 
 
             .col2 {
+
                 .image {
                     width: 100%;
                     min-height: 100px;

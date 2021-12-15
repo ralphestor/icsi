@@ -216,7 +216,6 @@ nav.scrolled ul .navlinks a {
 }
 
 .logoutBtn {
-  display: none;
   border: 1px solid #690000;
   background-color: #df3131;
 }

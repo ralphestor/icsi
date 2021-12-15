@@ -3,7 +3,7 @@
     <nav>
         <div>
             <a href="/" id="auroraLink">
-                <img class="logoImg" src="./images/icsilogo.png" alt="ICSI Logo">
+                <img class="logoImg" src="/images/icsilogo.png" alt="ICSI Logo">
                 <h1>International College of St. Ignatius de Loyola</h1>
             </a>
         </div>
@@ -21,8 +21,11 @@
                 <a href="/articles">Articles</a>
             </li>
 
-            <button class="navBtn loginBtn" onclick=" location.href = '/login' ">Admin Login</button>
-            <button class="navBtn logoutBtn">Logout</button>
+            <% if(!isAuth) {%>
+                <button class="navBtn loginBtn" onclick=" location.href = '/login' ">Admin Login</button>
+            <% } else { %>
+                <button class="navBtn logoutBtn" onclick=" location.href = '/logout' ">Logout</button>
+            <% } %>
             
         </ul>
     </nav>
@@ -46,9 +49,12 @@
                 <li class="navlinksMob">
                     <a href="/articles">Articles</a>
                 </li>
-
+                
+                <% if(!isAuth) {%>
                 <button class="navBtn loginBtn" onclick=" location.href = '/login' ">Admin Login</button>
-                <button class="navBtn logoutBtn">Logout</button>
+                <% } else { %>
+                <button class="navBtn logoutBtn" onclick=" location.href = '/logout' ">Logout</button>
+                <% } %>
             </ul>
         </div>
     </aside>
